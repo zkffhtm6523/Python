@@ -11,3 +11,5 @@ print('in의 활용 : ','world' in 'hello world')
 #path
 import os.path
 print('path도 boolean 가능 : ',os.path.exists('boolean.py'))
+print('path도 boolean 가능 : ',os.path.exists('boolean.py'))
+print('path도 boolean 가능 : ',os.path.exists('boolean.py'))
