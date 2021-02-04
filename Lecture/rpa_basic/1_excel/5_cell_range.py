@@ -59,7 +59,7 @@ for rows in tuple(ws.rows):
 for row in ws.iter_rows(min_row=1, max_row=5, min_col=2, max_col=3): # 전체 rows
     print(row)
 
-# 전체 columns
+# 전체 columnss
 # for column in ws.iter_columns(): # 전체 rows
 #     print(column)
 
