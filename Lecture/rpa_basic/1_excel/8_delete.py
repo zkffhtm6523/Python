@@ -9,3 +9,6 @@ ws = wb.active
 ws.delete_rows(8, 3)
 
 wb.save("sample_delete_row.xlsx")
+
+ws.delete_cols(2) #2번째 열 (B) 삭제
+wb.save("sample_delete_cols.xlsx")
