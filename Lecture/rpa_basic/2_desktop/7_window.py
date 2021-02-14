@@ -21,7 +21,7 @@ pyautogui.click(fw.left + 25, fw.top + 20)
 #     print(i)
 
 # 타이틀이 제목없는 것 중 첫 번째
-w = pyautogui.getWindwosWithTitle("제목 없음")[0]
+w = pyautogui.getWindowsWithTitle("제목 없음")[0]
 print(w)
 
 # 현재 활성화가 되지 않았다면
