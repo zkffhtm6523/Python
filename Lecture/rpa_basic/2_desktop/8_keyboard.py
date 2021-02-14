@@ -39,7 +39,16 @@ pyautogui.hotkey("ctrl", "alt", "shift", "a")
 
 import pyperclip
 # "나도코딩" 글자를 클립보드에 저장
-pyperclip.copy("나도코딩")
+# pyperclip.copy("나도코딩")
 
 # 클립보드에 있는 내용을 붙여넣기
-pyautogui.hotkey("ctrl", "a")
+# pyautogui.hotkey("ctrl", "v")
+
+def my_write(text):
+    pyperclip.copy(text)
+    pyautogui.hotkey("ctrl","v")
+
+my_write("나도코딩")
+
+# win : ctrl + alt + del
+# mac : cmd + shift + option + q
