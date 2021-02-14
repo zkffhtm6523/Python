@@ -2,6 +2,7 @@ import pyautogui
 
 # https://note.redgoose.me/article/2119/
 # ctrl + F9
+# cmd + option + 9
 
 # 마우스 이동
 # 지정한 위치로 마우스를 이동
