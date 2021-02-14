@@ -87,4 +87,3 @@ def my_click(img_file, timeout=30):
 
 # pyautogui.click(file_menu_notepad)
 my_click("file_menu_notepad.png", 1)
-#˝
