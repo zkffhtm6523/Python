@@ -113,7 +113,7 @@ print(os.listdir("rpa_basic"))
 # os.remove("new_file.txt")
 
 # 폴더 만들기
-# os.mkdir("new_folder") # 현재 경로 기준
+#os.mkdir("rpa_basic/new_folder") # 현재 경로 기준
 # os.mkdir("D:/2_Develop/Python/Lecture/new_folder") # 절대 경로 기준
 
 # 폴더 여러개 만들기(하위 경로)
@@ -126,3 +126,23 @@ print(os.listdir("rpa_basic"))
 import shutil
 # 폴더 안이 비어 있지 않아도 완전 삭제 가능
 # shutil.rmtree("new_folders")
+
+# 파일 복사
+# 어떤 파일을 폴더 안으로 복사하기
+# 원본 경로, 대상 경로, 폴더가 없다면 생성해서 넣음
+# shutil.copy("file_menu.png","test_folder")
+# shutil.copy("file_menu.png","test_folder/copied_file_menu.png")
+
+# shutil.copyfile("file_menu.png","rpa_basic/test_folder/copied_run_btn_2.png")
+
+# shutil.copy2("file_menu.png","rpa_basic/test_folder/copied2_run_btn_.png")
+
+# copy, copyfile : 메타정보 복사 X, 새로 생성함
+# copy2 : 메타정보 복사 O, 그 전의 파일 생성 일자 그대로 가져옴
+
+# 폴더 복사(하위 폴더까지 그대로)
+# shutil.copytree("rpa_basic/test_folder","rpa_basic/test_folder2")
+
+# 폴더 이동(test_folder 하위로 들어감)
+# 이동되는 폴더가 없으면 현재 폴더 이름이 변경됨
+# shutil.move("rpa_basic/test_folder","rpa_basic/test_folder_rename")
