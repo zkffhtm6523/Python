@@ -97,7 +97,32 @@ print(os.listdir("rpa_basic"))
 # print(os.path.isfile("run_btn.png"))
 
 # 주어진 경로가 존재하는지?
-if os.path.exists("rpa_basic"):
-    print("파일 또는 폴더가 존재합니다.")
-else:
-    print("존재하지 않습니다.")
+# if os.path.exists("rpa_basic"):
+#     print("파일 또는 폴더가 존재합니다.")
+# else:
+#     print("존재하지 않습니다.")
+
+# 파일 만들기
+# 빈 파일 생성
+# open("new_file.txt","a").close() 
+
+# 파일명 변경하기
+#  
+
+# 파일 삭제
+# os.remove("new_file.txt")
+
+# 폴더 만들기
+# os.mkdir("new_folder") # 현재 경로 기준
+# os.mkdir("D:/2_Develop/Python/Lecture/new_folder") # 절대 경로 기준
+
+# 폴더 여러개 만들기(하위 경로)
+# os.makedirs("new_folders/a/b/c")
+
+# 폴더 지우기
+# os.rmdir("new_folder")
+
+#shell utilities
+import shutil
+# 폴더 안이 비어 있지 않아도 완전 삭제 가능
+# shutil.rmtree("new_folders")
