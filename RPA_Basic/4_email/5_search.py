@@ -28,6 +28,24 @@ with MailBox("imap.gmail.com", 993).login(EMAIL_ADDRESS, EMAIL_PASSWORD, initial
     #     print("[{}] {}".format(msg.from_, msg.subject))
 
     # 특정 글자 포함 메일(제목_한글 가능)
-    for msg in mailbox.fetch(limit=3, reverse=True):
-        if "테스트" in msg.subject:
-            print("[{}] {}".format(msg.from_, msg.subject))
+    # for msg in mailbox.fetch(limit=3, reverse=True):
+    #     if "테스트" in msg.subject:
+    #         print("[{}] {}".format(msg.from_, msg.subject))
+
+    # 특정 날짜 이후 메일
+    # for msg in mailbox.fetch('(SENTSINCE 07-Nov-2020)',limit=3, reverse=True):
+    #     print("[{}] {}".format(msg.from_, msg.subject))
+
+    # 특정 날짜 메일
+    # for msg in mailbox.fetch('(SENTSINCE 22-Feb-2021)',limit=3, reverse=True):
+    #     print("[{}] {}".format(msg.from_, msg.subject))
+
+    # 참고 : https://pypi.org/project/imap-tools/
+
+    # 2가지 이상의 조건을 모두 만족하는 메일(AND)
+    # for msg in mailbox.fetch('(SENTSINCE 22-Feb-2021 SUBJECT "test")',limit=3, reverse=True):
+    #     print("[{}] {}".format(msg.from_, msg.subject))
+
+    # 2가지 이상의 조건을 모두 만족하는 메일(OR)
+    for msg in mailbox.fetch('(OR ON 21-Feb-2021 SUBJECT "testx")',limit=3, reverse=True):
+        print("[{}] {}".format(msg.from_, msg.subject))
