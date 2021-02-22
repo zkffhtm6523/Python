@@ -14,8 +14,25 @@ msg["TO"] = "zkffhtm6523@gmail.com"
 msg.set_content("다운로드 하세요.")
 
 # 파일 첨부
-with open("myw3schoolsimage.jpg", "rb") as f:
-    msg.add_attachment(f.read(), maintype="image", subtype="jpg", filename=f.name)
+# Image[JPG]
+# with open("myw3schoolsimage.jpg", "rb") as f:
+#     msg.add_attachment(f.read(), maintype="image", subtype="jpg", filename=f.name)
+
+# PDF
+# with open("테스트.pdf", "rb") as f:
+#     msg.add_attachment(f.read(), maintype="application", subtype="pdf", filename=f.name)
+
+# Excel
+with open("enum.xlsx", "rb") as f:
+    msg.add_attachment(f.read(), maintype="application", subtype="octet-stream", filename=f.name)
+
+
+# 기본값 : maintype="application", subtype="octet-stream"
+
+
+# Google에서 MIME 타입 검색하기
+# https://developer.mozilla.org/ko/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types
+
 
 with smtplib.SMTP("smtp.gmail.com", 587) as smtp:
     smtp.ehlo()
