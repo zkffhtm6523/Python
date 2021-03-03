@@ -21,4 +21,8 @@ print(index)
 index = python.index("n", index + 1)
 print(index)
 
-print
+# 글자 찾기, 없으면 -1
+print(python.find("Java"))
+
+# 반복
+print('a의 2번 반복 : ',(a + ' ') * 2)
