@@ -19,4 +19,4 @@ for i in range(1, 51):
 이름 : {2}
 업무 요약 : {3}
 '''
-.format(i, "Tech Team", "David", "Solution"))
+.format(i, "Tech Team", "David", "Solution"))1
