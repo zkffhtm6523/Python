@@ -1,5 +1,9 @@
 # 다중 상속 : 부모 여러명
 
+# pass : 생성자 초기화 시 넣어줄 코드가 없을 때 pass 넣어줌
+        # 즉, 해당 부분에서 오류가 발생하지 않도록 코드가 없음을 선언해주는 것
+        # pass
+
 # 일반 유닛(부모 클래스)
 class Unit:
     # Python의 생성자
@@ -54,7 +58,9 @@ class FlyableAttackUnit(AttackUnit, Flyable):
 # 건물
 class BuildingUnit(Unit):
     def __init__(self, name, hp, location):
-        pass
+        # super로 초기화 시 self는 필요 없음
+        super().__init__(name, hp, 0)
+        self.location = location
 
 # 서플라이 디폿 : 건물, 1개 건물 = 8 유닛
 supply_depot = BuildingUnit("서플라이 디폿", 500, "7시")
@@ -62,8 +68,8 @@ supply_depot = BuildingUnit("서플라이 디폿", 500, "7시")
 def game_start():
     print("[알림] 새로운 게임을 시작합니다.")
 
-def game_over():
-    # pass
+# def game_over():
+#     # pass
 
 game_start()
 game_over()
